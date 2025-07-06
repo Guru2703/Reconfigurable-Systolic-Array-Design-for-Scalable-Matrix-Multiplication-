@@ -5,7 +5,7 @@
 // 
 // Create Date: 20.12.2024 21:51:48
 // Design Name: 
-// Module Name: L2_cache
+// Module Name: SharedScratchpad
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
