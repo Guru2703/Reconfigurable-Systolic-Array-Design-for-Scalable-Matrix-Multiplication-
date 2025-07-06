@@ -5,7 +5,7 @@
 // 
 // Create Date: 05.01.2025 12:35:27
 // Design Name: 
-// Module Name: pe_scheduler8and4_combiner
+// Module Name: reconfigurable_scheduler
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
