@@ -34,12 +34,12 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 
 ## 🔧 Verilog Modules
 
-- `top_level_array.v` – Top module for 8×8 systolic array
-- `pe.v` – Processing Element with MAC logic
-- `array_controller.v` – Control logic for instruction decoding and mode switching
-- `cache_mem.v` – Local cache handling inputs/weights
-- `instruction_decoder.v` – Fixed-format instruction parser
-- `testbench.v` – Simulation and mode verification testbench
+- `Coprocessor.v` – Top module for 8×8 systolic array
+- `PE.v` – Processing Element with MAC logic
+- `reconfigurable_scheduler.v` – Control logic for instruction decoding and mode switching
+- `sa_shift_register.v` – Local memory handling inputs/weights
+- `ctrl_unit_main.v` – Fixed-format instruction parser
+- `SA_tb.v` – Simulation and mode verification testbench
 
 ---
 
@@ -49,11 +49,11 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
     - Mode bit (4x4 / 8x8)
     - Sub-block selector
     - Data location (cache or scratchpad)
-    - Matrix indices (row/col)
-    - Operation trigger
+    - Store and Load data
+    - Reset sub block
 
 2. **Modes**
-    - `Mode = 0` → Four independent 4×4 matrix multiplications  
+    - `Mode = 0` → Four independent 4×4 matrix multiplications by selecting sub blocks 
     - `Mode = 1` → One full 8×8 operation with inter-block data flow
 
 3. **Control**
