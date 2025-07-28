@@ -28,7 +28,7 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 - Local caches: `3×4×4×8` structure (Inputs, Weights, Outputs)
 - Shared scratchpad memory
 - Data pipeline for output-stationary flow
-- Internal PE control with multiply, accumulate, and activation support
+- Internal PE control with multiply, accumulate support
 
 ---
 
@@ -40,7 +40,6 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 - `cache_mem.v` – Local cache handling inputs/weights
 - `instruction_decoder.v` – Fixed-format instruction parser
 - `testbench.v` – Simulation and mode verification testbench
-- `config_pkg.vh` – Parameter definitions for scalability (4x4, 8x8, etc.)
 
 ---
 
@@ -65,21 +64,21 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 ---
 
 ## 🚀 Simulation & Testing
-
-- Simulated using **ModelSim/VCS**  
+ 
 - Waveforms verified for both modes  
 - Memory init files used to load input and weight matrices  
-- Final result stored in local output buffer
+- Final result stored in scratchpad memory
 
 ---
 
 ## 🧩 Future Work
 
 - [ ] Integrate AXI4-Lite for processor memory access  
-- [ ] Add pooling layer support  
-- [ ] Extend to 16×16 and 32×32 with tiling  
-- [ ] Interface with real CNN layers via GEMM preprocessor  
-- [ ] FPGA Deployment (Zynq or Artix-7)
+- [ ] Add pooling layer support (average/max pooling)  
+- [ ] Implement custom RISC-V instruction format for control  
+- [ ] Extend to 16×16 and 32×32 arrays with tiling support  
+- [ ] Interface with real CNN workloads via GEMM mapper  
+- [ ] FPGA Deployment (Zynq or Artix-7 board)
 
 ---
 
