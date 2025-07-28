@@ -69,11 +69,10 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 - Memory init files used to load input and weight matrices  
 - Final result stored in scratchpad memory
 
-- Example 
- A =[[4,2,5,0],          
-     [3,1,2,0],
-     [1,3,1,0],
-     [0,0,0,0]]
+![Alt text](Reconfigurable-Systolic-Array-Design-for-Scalable-Matrix-Multiplication-/test_bench
+/Screenshot (516).png
+)
+
 ---
 
 ## 🧩 Future Work
