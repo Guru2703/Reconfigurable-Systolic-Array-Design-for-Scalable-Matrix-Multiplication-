@@ -82,6 +82,4 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 
 ---
 
-## 📁 Directory Structure
-
 
