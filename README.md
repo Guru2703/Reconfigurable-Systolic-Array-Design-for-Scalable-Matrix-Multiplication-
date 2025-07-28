@@ -69,7 +69,7 @@ The 8×8 array is divided into four 4×4 subarrays, each with:
 - Memory init files used to load input and weight matrices  
 - Final result stored in scratchpad memory
 
-![Simulation Result]test_bench/4x4result.png)
+![Simulation Result](test_bench/4x4result.png)
 
 ---
 
